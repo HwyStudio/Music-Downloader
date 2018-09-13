@@ -24,7 +24,6 @@ def geturl():
 	return driver
 
 
-
 # 显示搜索结果
 def show_results(driver):
 	music_list = []
@@ -40,8 +39,6 @@ def show_results(driver):
 	for i in range(len(music_list)):
 		print(music_list[len(music_list) - i - 1])
 
-
-
 	choice = input("[==]请选择一个(你可以输入'quit'(不带引号)返回):")
 	if choice == 'quit':  # 从下载界面退回
 		result = 'quit'
@@ -53,7 +50,6 @@ def show_results(driver):
 			print('请进行选择!')
 			return show_results(driver)
 			#递归
-
 		
 		global music_name
 		music_name = driver.find_element_by_xpath(
